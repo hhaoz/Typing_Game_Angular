@@ -13,10 +13,8 @@ import { RouterOutlet } from '@angular/router';
 export class AppComponent {
   title = 'first_project';
 
-  constructor() {}
+  constructor() { }
 
-  // click (event binding)
-  // {{title}} (databinding)
   words = ["apple", "banana", "cherry", "date", "elderberry", "fig", "grape", "honeydew",
     "kiwi", "lemon", "mango", "nectarine", "orange", "peach", "quince", "raspberry",
     "strawberry", "tangerine", "ugli", "vanilla", "watermelon", "xigua", "yam", "zucchini",
@@ -28,7 +26,7 @@ export class AppComponent {
     "rose", "star", "tree", "unicorn", "violin", "windmill", "xylophone", "yellow", "zebra",
     "ant", "ball", "candle", "dolphin", "egg", "fire", "gift", "honey", "ice", "juice",
     "kite", "lemon", "mango", "nest", "ocean", "pencil", "quill", "ring", "sun", "tent"]
-    
+
   index = Math.floor(Math.random() * this.words.length);
   word = this.words[this.index]
   typeWords = "";
@@ -84,33 +82,18 @@ export class AppComponent {
   }
 
   scoreHandle() {
-    if (this.scoreValue > 0){
-        this.scoreValue--;
+    if (this.scoreValue > 0) {
+      this.scoreValue--;
     } else {
-        this.scoreValue = 0;
+      this.scoreValue = 0;
     }
-}
+  }
 
   @HostListener('document:keypress', ['$event'])
   enterHandler(event: KeyboardEvent) {
     if (event.key == "Enter") {
       this.checkWord();
     }
-    
+
   }
-
-  // @HostListener('document:keypress', ['$event'])
-  // keyHandler(event: KeyboardEvent) {
-  //   if (event.key.match(/[a-z]/)) {
-  //     this.buttons.forEach((row: any) => {
-  //       for (let key in row) {
-  //         if (row[key].includes(event.key)) {
-  //           // this.typeWords += event.key.toUpperCase();
-  //         }
-  //       }
-  //   }
-  // }
-
-  // how to use ngStyle
-
 }

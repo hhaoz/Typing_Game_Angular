@@ -10,11 +10,7 @@
 
   <div class="input">
       <input type="text" id="input" placeholder="Start typing..." [(ngModel)]="typeWords">
-      <!-- <span class="material-symbols-outlined" id="refresh">
-          refresh
-      </span> -->
       <button id="start-btn" (click)="startGame()">Start</button>
-      <!-- <button class="start-btn" (click)="checkWord()">Check</button> -->
   </div>
 
   <div class="result">
@@ -22,70 +18,7 @@
       <p>Score: {{scoreValue}}</p>
   </div>
 
-  <!-- <div id="keyboard-container">
-      <div class="key-row">
-          <div class="key tab" data-key="9">TAB</div>
-          <div class="key" data-key="81">Q</div>
-          <div class="key" data-key="87">W</div>
-          <div class="key" data-key="69">E</div>
-          <div class="key" data-key="82">R</div>
-          <div class="key" data-key="84">T</div>
-          <div class="key" data-key="89">Y</div>
-          <div class="key" data-key="85">U</div>
-          <div class="key" data-key="73">I</div>
-          <div class="key" data-key="79">O</div>
-          <div class="key" data-key="80">P</div>
-          <div class="key" data-key="219">[</div>
-          <div class="key" data-key="221">]</div>
-          <div class="key" data-key="220">\</div>
-
-      </div>
-      <div class="key-row">
-          <div class="key caps" data-key="20">CAPS</div>
-          <div class="key" data-key="65">A</div>
-          <div class="key" data-key="83">S</div>
-          <div class="key" data-key="68">D</div>
-          <div class="key" data-key="70">F</div>
-          <div class="key" data-key="71">G</div>
-          <div class="key" data-key="72">H</div>
-          <div class="key" data-key="74">J</div>
-          <div class="key" data-key="75">K</div>
-          <div class="key" data-key="76">L</div>
-          <div class="key" data-key="186">;</div>
-          <div class="key" data-key="222">'</div>
-          <div class="key enter" data-key="13">ENTER</div>
-      </div>
-      <div class="key-row">
-          <div class="key shift" data-key="16">SHIFT</div>
-          <div class="key" data-key="90">Z</div>
-          <div class="key" data-key="88">X</div>
-          <div class="key" data-key="67">C</div>
-          <div class="key" data-key="86">V</div>
-          <div class="key" data-key="66">B</div>
-          <div class="key" data-key="78">N</div>
-          <div class="key" data-key="77">M</div>
-          <div class="key" data-key="188">,</div>
-          <div class="key" data-key="190">.</div>
-          <div class="key" data-key="191">/</div>
-          <div class="key shift" data-key="16">SHIFT</div>
-      </div>
-  </div> -->
-
-  <!--If else  -->
-  <!-- @if (this.timeCountdown == 0 && this.scoreValue == 0) {
-    <h2>You lose</h2>
-  } @else if (this.timeCountdown == 0 && this.scoreValue != 0) {
-    
-    <h2>Your score is: {{scoreValue}}</h2>
-  }  @else {
-    <h2>You're playing</h2>
-  } -->
-
-  <!-- <h2 *ngIf = "timeCountdown == 0">Your score is: {{scoreValue}}</h2>
-  <h2 *ngIf = "timeCountdown != 0">You're playing</h2> -->
-
   <div id="keyboard-container">
-    <!-- For -->
     @for (row of buttons; track $index) {
       @if ($index == 0) {
         <div id="top">
@@ -108,8 +41,4 @@
       }
     }
   </div>
-
-
-  <!-- <h2 *ngIf = "timeCountdown == 0">Your score is: {{scoreValue}}</h2> -->
-  <!-- <div *ngFor="let item of items; index as i; TrackBy: track></div> -->
 </div>
